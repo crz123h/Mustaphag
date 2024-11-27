@@ -3,18 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>متجر مصطفى جميل</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <script src="js/main.js" defer></script>
+    <title>متجر مصطفى جميل - الصفحة الرئيسية</title>
+    <style>
+        /* إعدادات عامة */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Arial", sans-serif;
+            background-color: #000; /* خلفية سوداء */
+            color: #fff;
+            line-height: 1.6;
+            direction: rtl;
+        }
+
+        /* رأس الصفحة */
+        .header {
+            background: linear-gradient(to right, #ff0000, #39ff14, #8000ff);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 0 0 10px #ff0000, 0 0 20px #39ff14;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.2rem;
+            padding: 10px 15px;
+            background: #222;
+            border: 2px solid #39ff14;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: #39ff14;
+            color: #000;
+        }
+
+        /* القسم الرئيسي */
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background-color: #111; /* خلفية رمادية غامقة */
+        }
+
+        .hero .hero-title {
+            font-size: 3.5rem;
+            color: #ff0000;
+            text-shadow: 0 0 15px #ff0000;
+            margin-bottom: 20px;
+        }
+
+        .hero .hero-description {
+            font-size: 1.5rem;
+            color: #39ff14;
+            margin-bottom: 30px;
+        }
+
+        .hero .hero-buttons a {
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: inline-block;
+            background: #8000ff;
+            color: #fff;
+            border: 2px solid #fff;
+            transition: all 0.3s ease;
+        }
+
+        .hero .hero-buttons a:hover {
+            background: #39ff14;
+            color: #000;
+        }
+
+        /* قسم الميزات */
+        .features {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #222;
+        }
+
+        .features .section-title {
+            font-size: 2.5rem;
+            color: #8000ff;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px #8000ff;
+        }
+
+        .features-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .feature-item {
+            max-width: 300px;
+            background: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .feature-item h3 {
+            color: #ff0000;
+            margin-bottom: 10px;
+        }
+
+        .feature-item p {
+            color: #fff;
+        }
+
+        /* تذييل الصفحة */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #111;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+
+        .footer span {
+            color: #39ff14;
+        }
+    </style>
 </head>
 <body>
-    <!-- خلفية متحركة -->
-    <div class="neon-background"></div>
-
     <!-- رأس الصفحة -->
     <header class="header">
-        <div class="container">
+        <div>
             <h1 class="logo">🎮 متجر مصطفى جميل 🎮</h1>
             <nav>
                 <ul class="nav-links">
@@ -30,53 +163,41 @@
 
     <!-- القسم الرئيسي -->
     <section class="hero">
-        <div class="container">
-            <h2 class="neon-text">مرحبًا بك في متجر مصطفى جميل</h2>
-            <p>أفضل متجر لألعاب البلايستيشن. استمتع بألعاب مذهلة وأسعار لا تُنافس!</p>
+        <div>
+            <h2 class="hero-title">مرحبًا بك في عالم الألعاب</h2>
+            <p class="hero-description">استمتع بأفضل ألعاب البلايستيشن بأحدث العروض والأسعار.</p>
             <div class="hero-buttons">
-                <a href="games.html" class="btn btn-primary">استعرض الألعاب</a>
-                <a href="offers.html" class="btn btn-secondary">العروض الحالية</a>
+                <a href="games.html">استعرض الألعاب</a>
+                <a href="offers.html">اكتشف العروض</a>
             </div>
         </div>
     </section>
 
-    <!-- ميزات المتجر -->
+    <!-- قسم الميزات -->
     <section class="features">
-        <div class="container">
-            <h2 class="section-title neon-text">لماذا تختار متجر مصطفى جميل؟</h2>
+        <div>
+            <h2 class="section-title">لماذا تختار متجر مصطفى جميل؟</h2>
             <div class="features-grid">
                 <div class="feature-item">
-                    <h3 class="feature-title">🎯 أسعار تنافسية</h3>
-                    <p>نوفر لك أفضل الأسعار مقارنة بالمنافسين.</p>
+                    <h3>🎯 أسعار تنافسية</h3>
+                    <p>نوفر لك أفضل الأسعار مقارنة بجميع المنافسين في السوق.</p>
                 </div>
                 <div class="feature-item">
-                    <h3 class="feature-title">⚡ سرعة التوصيل</h3>
-                    <p>توصيل سريع وآمن لجميع الطلبات.</p>
+                    <h3>⚡ سرعة التوصيل</h3>
+                    <p>سرعة تنفيذ الطلبات وضمان تجربة مستخدم استثنائية.</p>
                 </div>
                 <div class="feature-item">
-                    <h3 class="feature-title">🌟 رضا العملاء</h3>
-                    <p>تقييمات عالية ودعم متاح 24/7.</p>
+                    <h3>🌟 رضا العملاء</h3>
+                    <p>تقييمات عالية ودعم عملاء مميز على مدار الساعة.</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- معلومات الاتصال -->
-    <section class="contact-info">
-        <div class="container">
-            <h2 class="section-title">اتصل بنا</h2>
-            <p>📞 رقم الهاتف: +967 782 881 661</p>
-            <p>📧 البريد الإلكتروني: <a href="mailto:Mustafajamil@gmail.com">Mustafajamil@gmail.com</a></p>
-            <p>💻 تم تطوير الموقع بواسطة: CRZ101</p>
         </div>
     </section>
 
     <!-- تذييل الصفحة -->
     <footer class="footer">
-        <div class="container">
-            <p>© 2024 متجر مصطفى جميل. جميع الحقوق محفوظة.</p>
-            <p>تم تطوير الموقع بواسطة: CRZ101</p>
-        </div>
+        <p>&copy; <span>2024</span> متجر مصطفى جميل. جميع الحقوق محفوظة.</p>
+        <p>تم تطوير الموقع بواسطة: CRZ101</p>
     </footer>
 </body>
-</html>
+    </html> 
